@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dr. Scanner</string>
+    <string name="title_home">Escanear</string>
+    <string name="title_historial">Historial</string>
+    <string name="title_vehiculos">Vehículos</string>
+    <string name="title_config">Config</string>
+
+    <string name="hint_codigo">P0300</string>
+    <string name="btn_scan">SCAN</string>
+    <string name="label_codigo">CÓDIGO DE DIAGNÓSTICO</string>
+
+    <string name="urgencia_alto">⚠ URGENTE</string>
+    <string name="urgencia_medio">ATENDER PRONTO</string>
+    <string name="urgencia_bajo">SIN URGENCIA</string>
+    <string name="urgencia_info">INFORMATIVO</string>
+
+    <string name="no_encontrado_titulo">Código no encontrado</string>
+    <string name="no_encontrado_msg">Este código no está en la base local de 1,511 códigos.</string>
+
+    <string name="sin_historial">SIN ESCANEOS</string>
+    <string name="sin_historial_msg">Los códigos que escanees aparecerán aquí</string>
+
+    <string name="sin_vehiculos">SIN VEHÍCULOS</string>
+    <string name="sin_vehiculos_msg">Agrega tu carro para llevar el historial por vehículo</string>
+    <string name="agregar_vehiculo">AGREGAR VEHÍCULO</string>
+
+    <string name="conectar_obd2">CONECTAR OBD2</string>
+    <string name="escanear_obd2">ESCANEAR VEHÍCULO VÍA OBD2</string>
+    <string name="sin_obd2">SIN OBD2</string>
+    <string name="obd2_conectado">OBD2</string>
+</resources>

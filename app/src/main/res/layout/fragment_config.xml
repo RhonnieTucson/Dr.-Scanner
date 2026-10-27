@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFIGURACIÓN"
+            android:textColor="@color/silver"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Logo + info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DR. SCANNER"
+                android:textColor="@color/silver"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnóstico OBD2 en lenguaje humano"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v1.0.0 · 1,511 códigos offline"
+                android:textColor="@color/border"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Estadísticas -->
+        <TextView style="@style/TextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ESTADÍSTICAS"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout android:id="@+id/containerStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Base de datos -->
+        <TextView style="@style/TextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASE DE DATOS"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <include layout="@layout/item_config_row"
+                android:id="@+id/rowVersion" />
+            <include layout="@layout/item_config_row"
+                android:id="@+id/rowFuente" />
+            <include layout="@layout/item_config_row"
+                android:id="@+id/rowCobertura" />
+        </LinearLayout>
+
+        <!-- Acciones -->
+        <TextView style="@style/TextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOPORTE"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/btnLimpiarHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗑 Limpiar historial"
+            android:textColor="@color/urgencia_alto"
+            android:textSize="14sp"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. Scanner · Diagnóstico sin complicaciones"
+            android:textColor="@color/border"
+            android:textSize="11sp"
+            android:gravity="center" />
+    </LinearLayout>
+</ScrollView>

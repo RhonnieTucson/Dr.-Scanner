@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ── Header ─────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DR. SCANNER"
+                    android:textColor="@color/silver"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIAGNÓSTICO OBD2"
+                    android:textColor="@color/muted"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2" />
+            </LinearLayout>
+
+            <!-- Badge OBD2 -->
+            <TextView
+                android:id="@+id/tvObdBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIN OBD2"
+                android:textColor="@color/muted"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/bg_badge_off"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- ── Stats ─────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <include layout="@layout/item_stat_card"
+                android:id="@+id/statCodigos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp" />
+
+            <include layout="@layout/item_stat_card"
+                android:id="@+id/statHoy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp" />
+
+            <include layout="@layout/item_stat_card"
+                android:id="@+id/statTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp" />
+
+            <include layout="@layout/item_stat_card"
+                android:id="@+id/statIA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- ── Panel de búsqueda ──────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CÓDIGO DE DIAGNÓSTICO"
+                android:textColor="@color/cyan"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.25"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCodigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_codigo"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="6"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/cyan"
+                        android:letterSpacing="0.2"
+                        android:imeOptions="actionSearch" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SCAN"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Chips de ejemplo -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipP0300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P0300"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipP0420"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P0420"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipP0171"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P0171"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipC0035"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C0035"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipU0100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="U0100"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipB0001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B0001"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <!-- ── Botón OBD2 (visible solo si está conectado) ── -->
+        <Button
+            android:id="@+id/btnScanObd"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="ESCANEAR VEHÍCULO VÍA OBD2"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

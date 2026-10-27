@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/surface"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="@color/border"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvCantidadCodigos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CÓDIGOS ENCONTRADOS"
+        android:textColor="@color/urgencia_alto"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/containerCodigos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toca un código para ver su diagnóstico"
+        android:textColor="@color/muted"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
